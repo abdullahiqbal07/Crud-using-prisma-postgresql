@@ -18,7 +18,7 @@ model Post {
   id        Int       @id @default(autoincrement())
   title     String
   content   String
-  author    String
+  author    String    @default("Unknown Author") // Add a default value
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 }
